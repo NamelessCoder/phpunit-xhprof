@@ -1,6 +1,6 @@
 language: php
 
-sudo: false
+sudo: true
 
 php:
   - "5.5"
@@ -15,8 +15,7 @@ matrix:
 
 before_install:
   - composer self-update
-  - pecl install xhprof
-  - sh -c 'if [ $(php -r "echo (int) defined(\"HHVM_VERSION\");") -eq 0 ]; then pecl install channel://pecl.php.net/xhprof-0.9.3; fi'
+  - sh -c 'if [ $(php -r "echo (int) defined(\"HHVM_VERSION\");") -eq 0 ]; then pecl install -f xhprof-beta; fi'
 
 install: composer install
 

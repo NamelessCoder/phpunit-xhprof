@@ -1,0 +1,21 @@
+{
+    "name": "namelesscoder/phpunit-xhprof",
+    "description": "XHProf / PHPUnit integration via PHP Trait for test cases",
+    "require": {
+        "ext-pdo_sqlite": "*",
+        "lox/xhprof": "dev-master",
+        "mikey179/vfsStream": "*",
+        "phpunit/phpunit": "^4.8",
+        "satooshi/php-coveralls": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NamelessCoder\\PhpunitXhprof\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NamelessCoder\\PhpunitXhprof\\Tests\\": "tests/"
+        }
+    }
+}
